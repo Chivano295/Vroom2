@@ -15,6 +15,7 @@ public class BoucingPlatformHitboxScript : MonoBehaviour
         if (other.gameObject.CompareTag("Roof"))
         {
             bouncingPlatforms.platformMovementSpeedUp = bouncingPlatforms.platformMovementSpeedUp * -1;
+            Debug.Log("TAG");
         }
     }
 }
