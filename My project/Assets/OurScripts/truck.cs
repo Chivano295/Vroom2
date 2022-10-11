@@ -6,12 +6,13 @@ using TMPro;
 public class truck : MonoBehaviour
 {
     int randoomnmbr;
-    bool isFake = false;
+    bool isTrue = false;
+    public bool Illegal = false;
 
     public TextMeshPro realLicense;
     public TextMeshPro fakeLicense;
-    public ScriptableObject[] scriptables;
-    public ScriptableObject currentscript;
+    public ScriptableLicense[] scriptables;
+    public ScriptableLicense currentscript;
 
     public void Start()
     {
@@ -19,14 +20,7 @@ public class truck : MonoBehaviour
     }
     public void Update()
     {
-       
-
-        if (isFake)
-        {
-            Debug.Log("Dit werkt");
-            currentscript = scriptables[Random.Range(0, 10)];
-            randoomnmbr = 0;
-        }
+         
     }
 
     public void Gen()
@@ -35,12 +29,29 @@ public class truck : MonoBehaviour
         
         if (randoomnmbr > 1)
         {
-            isFake = true;
+            isTrue = true;
 
         }
         else
         {
-            isFake = false;
+            isTrue = false;
+        }
+        if (isTrue)
+        {
+            Illegal = true;
+            Debug.Log("Dit werkt");
+            currentscript = scriptables[Random.Range(0, 10)];
+            randoomnmbr = 0;
+            realLicense.text = ("" + currentscript.license);           
+        }
+       //sets the text on the truck
+        if(Illegal == true)
+        {
+            fakeLicense.text = ("" + currentscript.fakeLicense);
+        }
+        else
+        {
+            fakeLicense.text = ("" + currentscript.license);
         }
     }
 }
