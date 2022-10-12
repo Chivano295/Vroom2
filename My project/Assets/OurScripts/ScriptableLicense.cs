@@ -7,6 +7,7 @@ public class ScriptableLicense : ScriptableObject
 {
     public string license;
 
+
     public string fakeLicense;
 
 }
