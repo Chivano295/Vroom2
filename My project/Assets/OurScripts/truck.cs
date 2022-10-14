@@ -20,14 +20,15 @@ public class truck : MonoBehaviour
     }
     public void Update()
     {
-         
+        
     }
 
     public void Gen()
     {
         randoomnmbr = Random.Range(1, 10);
-        
-        if (randoomnmbr > 1)
+
+        Debug.Log(randoomnmbr);
+        if (randoomnmbr > 5)
         {
             isTrue = true;
 
@@ -35,12 +36,14 @@ public class truck : MonoBehaviour
         else
         {
             isTrue = false;
+            currentscript = scriptables[Random.Range(0, 9)];
+            realLicense.text = ("" + currentscript.license);
+            fakeLicense.text = ("" + currentscript.license);
         }
         if (isTrue)
         {
-            Illegal = true;
-            Debug.Log("Dit werkt");
-            currentscript = scriptables[Random.Range(0, 10)];
+            Illegal = true;           
+            currentscript = scriptables[Random.Range(0, 9)];
             randoomnmbr = 0;
             realLicense.text = ("" + currentscript.license);           
         }
@@ -49,9 +52,9 @@ public class truck : MonoBehaviour
         {
             fakeLicense.text = ("" + currentscript.fakeLicense);
         }
-        else
-        {
-            fakeLicense.text = ("" + currentscript.license);
-        }
+        
+        
+            
+        
     }
 }
