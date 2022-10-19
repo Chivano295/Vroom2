@@ -6,29 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/OurScripts/OurScenes/MainMenu.unity
+    guid: 0518315144ece3947b79932ec1dd78be
+  - enabled: 0
     path: Assets/BNG Framework/Scenes/XR Demo.unity
     guid: a1360534006d3f845bc79b46b93cfec5
-  - enabled: 1
+  - enabled: 0
     path: Assets/BNG Framework/Scenes/Scene Transitioning.unity
     guid: 9d7c9629abf9c99449e358b0938b47d0
-  - enabled: 1
+  - enabled: 0
     path: Assets/BNG Framework/Scenes/Physics Hands.unity
     guid: 34a4579517c578e4080d0a6ef2c96294
-  - enabled: 1
+  - enabled: 0
     path: Assets/BNG Framework/Scenes/Rigidbody Player.unity
     guid: 57fc97c5771a777449aa8bd02514df22
-  - enabled: 1
+  - enabled: 0
     path: Assets/BNG Framework/Scenes/Vehicle Example.unity
     guid: d96233ee44d985d4fb8dc23a907c06eb
-  - enabled: 1
+  - enabled: 0
     path: Assets/BNG Framework/Scenes/Playing scene.unity
     guid: 07db6c4d39a64a24b90830f4704e23be
   - enabled: 1
     path: Assets/BNG Framework/Scenes/PlayArea.unity
     guid: 743d2792530cbcc4980185e8e076448d
-  - enabled: 1
-    path: Assets/OurScripts/OurScenes/MainMenu.unity
-    guid: 0518315144ece3947b79932ec1dd78be
   - enabled: 1
     path: Assets/BNG Framework/Scenes/Chivanoplay.unity
     guid: 86561fc6ce265d84eafeed62d5f9c990
