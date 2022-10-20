@@ -14,9 +14,10 @@ public class truck : MonoBehaviour
     public ScriptableLicense[] scriptables;
     public ScriptableLicense currentscript;
 
-    public void Start()
+    public void Awake()
     {
         Gen();
+        Illegal = false;
     }
     public void Update()
     {

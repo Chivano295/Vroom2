@@ -9,10 +9,10 @@ public class AppStartManager : MonoBehaviour
     {
         Camera.main.backgroundColor = Color.black;
     }
-    public void LoadMenu()
+    public void LoadMenu(string String)
     {
         Debug.Log("Starting menu");
-        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+        SceneManager.LoadScene(String, LoadSceneMode.Single);
     }
     public void QuitGame()
     {
