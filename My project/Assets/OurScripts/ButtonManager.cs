@@ -10,24 +10,40 @@ public class ButtonManager : MonoBehaviour
     public AudioSource fail;
     public void Pass()
     {
-        if(!Truck.Illegal)
-         StartCoroutine(Passing());
+        if (!Truck.Illegal)
+        {
+            win.Play();
+            StartCoroutine(Passing());
+        }
+        
         if (Truck.Illegal)
+        {
+            fail.Play();
             StartCoroutine(PassFail());
+        }
+           
                
     }
     public void fails()
     {
         if (Truck.Illegal)
+        {
             StartCoroutine(Fail());
+            win.Play();
+        }
+            
         if (!Truck.Illegal)
+        {
             StartCoroutine(FailPass());
+            fail.Play();
+        }
+          
 
     }
     public IEnumerator Passing()
     {
         Debug.Log("this works");
-        win.Play();
+        
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("mainmenu");
 
@@ -42,7 +58,7 @@ public class ButtonManager : MonoBehaviour
     public IEnumerator Fail()
     {
         Debug.Log("this works");
-        win.Play();
+     
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("mainmenu");
 
@@ -50,7 +66,7 @@ public class ButtonManager : MonoBehaviour
 
     public IEnumerator FailPass()
     {
-        fail.Play();
+       
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("mainmenu");
     }
